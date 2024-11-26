@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="simulacao.css">
+  <title>Simulador de Votação</title>
+</head>
+<body>
+    <header>
+        <img src="img/logo justiça eleitoral.png" alt="Logo Justiça Eleitoral" class="logo">
+    </header>
+ <main>
+  <div class="urna">
+    <div class="visor">
+      <h2>SEU VOTO PARA</h2>
+      <h4 id="cargo-voto">Governador</h4>
+      <div class="numero">
+        <span id="digito-1">_</span>
+        <span id="digito-2">_</span>
+      </div>
+      <div class="informacoes">
+        <div class="detalhes">
+          <p><strong>Número:</strong> <span id="numero-candidato">--</span></p>
+          <p><strong>Nome:</strong> <span id="nome-candidato">---</span></p>
+          <p><strong>Partido:</strong> <span id="partido-candidato">---</span></p>
+          <p><strong>Vice-Governador:</strong> <span id="vice-candidato">---</span></p>
+        </div>
+        <div class="imagens">
+          <img id="foto-governador" alt="Governador">
+          <img id="foto-vice" alt="Vice-Governador">
+        </div>
+      </div>
+      <p id="mensagem-nulo"></p>
+    </div>
+    <div class="teclado">
+      <div class="numeros">
+        <button class="botao" data-numero="1">1</button>
+        <button class="botao" data-numero="2">2</button>
+        <button class="botao" data-numero="3">3</button>
+        <button class="botao" data-numero="4">4</button>
+        <button class="botao" data-numero="5">5</button>
+        <button class="botao" data-numero="6">6</button>
+        <button class="botao" data-numero="7">7</button>
+        <button class="botao" data-numero="8">8</button>
+        <button class="botao" data-numero="9">9</button>
+        <button class="botao" data-numero="0">0</button>
+      </div>
+      <div class="acoes">
+        <button class="botao branco">BRANCO</button>
+        <button class="botao corrige">CORRIGE</button>
+        <button class="botao confirma">CONFIRMA</button>
+      </div>
+    </div>
+  </div>
+  <button class="reiniciar-votos" onclick="reiniciarVotos()">Reiniciar Votos</button>
+ </main>
+  <script src="simulacao.js"></script>
+</body>
+</html>

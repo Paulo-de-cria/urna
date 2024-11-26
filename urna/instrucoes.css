@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+header {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    width: 150px;
+    display: block;
+}
+
+.textos {
+    margin: 20px;
+}
+
+.textos h1 {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.textos p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.instrucoes {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.instrucoes h2 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.instrucoes ol, .instrucoes ul {
+    margin-left: 20px;
+}
+
+.instrucoes ol li, .instrucoes ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.botao:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 150px;
+    }
+
+    .textos h1 {
+        font-size: 1.5rem;
+    }
+
+    .textos p {
+        font-size: 1rem;
+    }
+
+    .instrucoes {
+        padding: 15px;
+    }
+
+    .instrucoes h2 {
+        font-size: 1.2rem;
+    }
+
+    .botao {
+        font-size: 0.9rem;
+    }
+}

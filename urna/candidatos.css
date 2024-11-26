@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+
+}
+
+header {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    width: 150px;
+    display: block;
+}
+
+main{
+    padding: 20px;
+}
+.candidatos h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+}
+
+.categoria {
+    margin-bottom: 30px;
+}
+
+.categoria h3 {
+    font-size: 1.4rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.candidato {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.perfil {
+    flex: 0 0 100px;
+    margin-right: 20px;
+}
+
+.perfil img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #007bff;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.botoes {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .candidato {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .perfil {
+        margin-bottom: 15px;
+    }
+
+    .perfil img {
+        width: 80px;
+        height: 80px;
+    }
+}

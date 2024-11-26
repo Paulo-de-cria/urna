@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="simulacao1.css">
+    <title>Votar prefeito</title>
+</head>
+<body>
+    <div id="container">
+            <div id="conteudo">
+                <input size="1" type="text" id="campo1" maxlength="1" readonly>
+                <input size="1" type="text" id="campo2" maxlength="1" readonly>
+            </div>
+
+            <div class="teclado">
+                <button class="b1" onclick="clicou(1)">1</button>
+                <button class="b1" onclick="clicou(2)">2</button>
+                <button class="b1" onclick="clicou(3)">3</button>
+                <button class="b1" onclick="clicou(4)">4</button>
+                <button class="b1" onclick="clicou(5)">5</button>
+                <button class="b1" onclick="clicou(6)">6</button>
+                <button class="b1" onclick="clicou(7)">7</button>
+                <button class="b1" onclick="clicou(8)">8</button>
+                <button class="b1" onclick="clicou(9)">9</button>
+                <button class="b1" onclick="clicou(0)">0</button>
+                <button class="botao-branco" onclick="votarBranco()">BRANCO</button>
+                <button class="botao-corrige" onclick="corrige()">CORRIGE</button>
+                <button class="botao-confirma" onclick="confirma()">CONFIRMA</button>
+            </div>
+            <audio id="som-confirmacao">
+                <button onclick="document.getElementById('som-confirmacao').play()">Tocar Som de Confirmação</button>
+            </audio>
+    </div>
+    <img src="ImgRepublicaFederativa.png" id="imgvotar" alt="">
+
+    <script>
+        let numeroDigitado = ''; // Variável para armazenar o número digitado pelo usuário
+
+        function clicou(numero) {
+            // Adiciona o número clicado ao campo de voto
+            if (numeroDigitado.length < 2) {
+                numeroDigitado += numero;
+                document.getElementById("campo1").value = numeroDigitado[0];
+                document.getElementById("campo2").value = numeroDigitado[1];
+            }
+        }
+
+        // Função para limpar o campo e a variável ao clicar em CORRIGE
+        function corrige() {
+            numeroDigitado = ''; // Limpa a variável
+            document.getElementById("campo1").value = ''; // Limpa o primeiro campo
+            document.getElementById("campo2").value = ''; // Limpa o segundo campo
+        }
+
+        function confirma() {
+            if (numeroDigitado === '12') {
+                votar(12, 'Clara', 'PDL - Partido das Divas Lindas', 'Elisiane', 'clara.png', 'elisiane.png');
+            } else if (numeroDigitado === '48') {
+                votar(48, 'Helder', 'PNT - Partido Não é Totó', 'Paulo', 'helder.png', 'paulo.png');
+            } else {
+                alert('Número inválido');
+                return;
+            }
+            window.location.href = "index1.html"; // Redireciona para a página de resultado
+        }
+
+        // Função para armazenar os dados do voto no localStorage
+        function votar(numero, nome, partido, vice, fotoCandidato, fotoVice) {
+            localStorage.setItem("votoNumero", numero);
+            localStorage.setItem("votoNome", nome);
+            localStorage.setItem("votoPartido", partido);
+            localStorage.setItem("votoVice", vice);
+            localStorage.setItem("votoFoto", fotoCandidato);
+            localStorage.setItem("votoFotoVice", fotoVice);
+        }
+    </script>
+</body>
+</html>
